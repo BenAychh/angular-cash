@@ -5,10 +5,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" href="./styles/main.css">
 </head>
-<body>
-  
-  <!-- Your code here  -->
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular.min.js"></script>
-</body>
+  <body ng-app="register">
+    <div ng-controller="cart">
+      <div class="buttons">
+        <div ng-repeat="(key, value) in cart.get()" ng-click="cart.increaseCount(key)" class="button">
+          <div class="subtract" ng-click="cart.decreaseCount(key)">
+            -
+          </div>
+          <p class="item">
+            {{key}}
+          </p>
+          <p class="price">
+            {{value.price}}
+          </p>
+        </div>
+      </div>
+      <div class="resetButton" ng-if="cart.isEmpty()" ng-click="cart.resetCount()">RESET</div>
+      <table class="receipt">
+        <tr ng-repeat="(key, value) in cart.receipt()">
+          <td>
+            {{key}}
+          </td>
+          <td>
+            {{value | currency}}
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+    <script type="text/javascript" src="./scripts/main.js"></script>
+  </body>
 </html>

@@ -1,0 +1,66 @@
+body {
+  font-family: sans-serif;
+}
+.buttons {
+  width: 80%;
+  margin-left: 10%;
+  overflow: hidden;
+  display: block;
+  position: relative;;
+}
+.button {
+  float: left;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(88, 88, 88);
+  border: 1px solid black;
+  color: white;
+  margin: 10px;
+  text-align: center;
+  text-transform: capitalize;
+  position: relative;
+  font-size: 16px;
+  cursor: pointer;
+}
+.resetButton {
+  overflow: hidden;
+  height: 36px;
+  width: 100px;
+  text-align: center;
+  position: relative;
+  left: 10%;
+  padding-top: 3px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+.subtract {
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  width: 20px;
+  height: 20px;
+  right: 0;
+}
+.receipt {
+  margin-left: 10%;
+  display: block;
+  font-size: 30px;
+}
+.receipt tr {
+  height: 30px;
+}
+tr:nth-child(2n + 1) {
+  background-color: rgb(196, 196, 196);
+}
+td:first-child {
+  width: 300px;
+}
+tr:nth-last-child(2) {
+  background-color: rgb(25, 158, 223);
+}
+tr:last-child {
+  background-color: rgb(18, 112, 158);
+  color: white;
+}
